@@ -1,0 +1,324 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  background-color: #2a0a51;
+  padding: 1rem;
+  position: fixed; 
+  width: 100%; 
+  top: 0; 
+  z-index: 1000; 
+}
+
+
+.btn {
+  display: inline-block; 
+  padding: 10px 20px; 
+  background-color: #000000; 
+  color: rgb(255, 255, 255); /* Warna teks */
+  text-decoration: none; /* Menghilangkan garis bawah */
+  border-radius: 5px; /* Sudut yang membulat */
+  transition: background-color 0.3s; /* Efek transisi saat hover */
+}
+.btn:hover {
+  background-color: #7600a1;
+}
+
+.logo {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: center; /* Aligns the logo to the left of the center */
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#menu-check {
+  display: none;
+}
+
+#menu-open,
+#menu-close {
+  display: none;
+}
+
+#menu-check:checked ~ ul {
+  display: block;
+}
+
+section {
+  height: 100vh;
+  background: url("purple-aesthetic-rain.gif") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding-top: 60px; /* Add padding to avoid content being hidden behind the nav */
+  padding: 60px 20px; /* Adjust padding for box content */
+}
+
+.content {
+  text-align: center;
+  background-color: #2a0a51; /* Background color for the box */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
+  max-width: 800px; /* Max width for better presentation */
+}
+
+footer {
+  background-color: #2a0a51;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: auto;
+}
+
+.footer-content h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-content p {
+  margin-bottom: 1.5rem;
+}
+
+.footer-boxes {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+}
+
+.footer-box {
+  width: 45%;
+  padding: 1rem;
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+.footer-box h4 {
+  margin-bottom: 0.5rem;
+}
+
+.socials {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.socials li {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.socials li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.footer-bottom {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+    flex-direction: column; /* Stacks logo and menu vertically */
+    justify-content: center; /* Centers all items */
+  }
+
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%; /* Full width for mobile */
+  }
+
+  nav ul li {
+    margin: 1rem 0; /* Margin for vertical list */
+  }
+
+  #menu-open {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  #menu-check:checked ~ label #menu-open {
+    display: none;
+  }
+
+  #menu-check:checked ~ label #menu-close {
+    display: block;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .footer-boxes {
+    flex-direction: column;
+  }
+
+  .footer-box {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+}
+
+.portfolio-grid {
+  display: flex; 
+  flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+  justify-content: space-between; /* Space items evenly */
+  margin-top: 20px; /* Add some space above the grid */
+}
+
+.portfolio-item {
+  flex: 0 0 calc(50% - 10px); /* Two items per row with space in between */
+  box-sizing: border-box; /* Ensure padding and border are included in total width */
+  margin-bottom: 20px; /* Space between rows */
+  text-align: center; /* Center text inside each item */
+}
+
+.portfolio-item img {
+  max-width: 100%; /* Make sure the image fits the box */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.rating-system {
+  background: url("purple-aesthetic-rain.gif") no-repeat center center/cover;
+  max-width: auto; /* Maksimal lebar untuk tampilan */
+  margin: auto; /* Centering the rating system */
+  padding: 20px; /* Padding di sekeliling */
+  border-radius: 0px; /* Sudut membulat */
+  box-shadow: 0px (255, 255, 255); /* Bayangan */
+  text-align: center; /* Memusatkan semua teks dalam sistem rating */
+}
+
+.rating-item {
+  margin-bottom: 20px; /* Jarak antar item */
+}
+
+.rating-item p {
+  font-weight: bold; /* Membuat teks tebal */
+  margin-bottom: 5px; /* Jarak antara judul dan bintang */
+  color: #ffffff; /* Warna teks */
+}
+
+.stars {
+  cursor: pointer; /* Menunjukkan bahwa bintang bisa diklik */
+}
+
+.star {
+  font-size: 24px; /* Ukuran bintang */
+  color: hsl(0, 0%, 100%); /* Warna bintang yang tidak dipilih */
+  transition: color 0.3s; /* Transisi warna saat hover */
+}
+
+.star:hover,
+.star:hover ~ .star {
+  color: #00fffb; 
+}
+
+
+#video {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.all-episode {
+  margin-bottom: 20px;
+}
+
+.all-episode h2 {
+  font-size: 24px;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.episode-item {
+  background-color: #2a0a51;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.episode-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.episode-title {
+  font-size: 18px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.toggle-button {
+  background-color: black;
+  color: orange;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.toggle-button:hover {
+  background-color: orange;
+  color: black;
+}
+
+.video-container iframe {
+  width: 640px;
+  height: 360px;
+  border-radius: 8px;
+}
+
+.content-box {
+  background-color: #ff0000;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content-box h2 {
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.content-box p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+}
+

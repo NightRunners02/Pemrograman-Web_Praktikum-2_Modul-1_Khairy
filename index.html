@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Praktikum Demo 2 | Pemrograman Web</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <input type="checkbox" id="menu-check" />
+      <label for="menu-check">
+        <i class="fa fa-bars" id="menu-open"></i>
+        <i class="fa fa-times" id="menu-close"></i>
+      </label>
+      <h1 class="logo">Night02</h1>
+      <ul>
+        <li><a href="#home" class="btn">Rumah </a></li>
+        <li><a href="#about" class="btn">Tentang</a></li>
+        <li><a href="#work" class="btn"> Pekerjaan</a></li>
+        <li><a href="#portfolio" class="btn">Portfolio</a></li>
+        <li><a href="#video" class="btn">Video</a></li>
+      </ul>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home">
+      <div class="content">
+        <h2>Welcome to Website Night02</h2>
+        <img src="Rimuruu.gif" alt="Rimuru" height="144" width="144" />
+        <br /><br />
+        <a href="#video" class="btn">Get in Touch</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="content">
+        <h2>Tentang Saya</h2>
+
+        <p>
+          Saya adalah tim desainer web yang berdedikasi untuk menciptakan situs
+          web yang indah dan fungsional. Misi saya adalah membantu bisnis
+          membangun kehadiran online mereka dan mencapai tujuan mereka.
+        </p>
+        <h2>Visi Saya</h2>
+        <p>
+          Menjadi pemimpin dalam industri desain web dengan menyediakan solusi
+          inovatif dan berkualitas tinggi.
+        </p>
+        <b><h2>Nilai Saya</h2></b>
+
+        <div class="rating-item">
+          <p>Kualitas</p>
+          <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+
+        <div class="rating-item">
+          <p>Kreativitas</p>
+          <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+
+        <div class="rating-item">
+          <p>Inovasi</p>
+          <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+
+        <div class="rating-item">
+          <p>Kejujuran</p>
+          <div class="stars">
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const stars = document.querySelectorAll(".star");
+
+      stars.forEach((star) => {
+        star.addEventListener("click", () => {
+          const ratingValue = star.getAttribute("data-value");
+          const parent = star.parentElement;
+
+          // Resetting the stars
+          parent.querySelectorAll(".star").forEach((s) => {
+            s.style.color = "#ddd"; // Reset to default color
+          });
+
+          // Setting the rating
+          for (let i = 0; i < ratingValue; i++) {
+            parent.children[i].style.color = "#ffcc00"; // Change color to selected
+          }
+        });
+      });
+    </script>
+
+    <!-- Work Section -->
+    <section id="work">
+      <div class="content">
+        <h2>Pekerjaan Saya</h2>
+        <p>
+          Saya telah mengerjakan berbagai proyek di berbagai industri.
+          Portofolio saya menunjukkan komitmen saya terhadap kualitas dan
+          inovasi.
+        </p>
+        <h2>Proyek Terkini</h2>
+        <p>- Website E-commerce untuk Toko Baju</p>
+        <p>- Portal Berita untuk Media Lokal</p>
+        <p>- Situs Portofolio untuk Fotografer Profesional</p>
+        <a href="#portfolio" class="btn">Lihat Portofolio Saya</a>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio">
+      <div class="content">
+        <h2>Portfolio</h2>
+        <p>
+          Lihat beberapa proyek terbaru saya. Saya bangga dengan perhatian saya
+          terhadap detail dan kemampuan saya untuk mewujudkan visi klien saya.
+        </p>
+        <div class="portfolio-grid">
+          <div class="portfolio-item">
+            <img
+              src="https://cdn.pixabay.com/photo/2020/09/09/11/10/tunnel-5557326_640.jpg"
+              alt="Project 1"
+              height="144"
+              width="144"
+            />
+            <h4>Project 1</h4>
+            <p>Deskripsi singkat tentang proyek ini.</p>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://cdn.pixabay.com/photo/2017/07/27/00/46/fantasy-2543658_640.jpg"
+              alt="Project 2"
+              height="144"
+              width="144"
+            />
+            <h4>Project 2</h4>
+            <p>Deskripsi singkat tentang proyek ini.</p>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://cdn.pixabay.com/photo/2024/05/29/20/54/woman-8797211_640.png"
+              alt="Project 3"
+              height="144"
+              width="144"
+            />
+            <h4>Project 3</h4>
+            <p>Deskripsi singkat tentang proyek ini.</p>
+          </div>
+          <div class="portfolio-item">
+            <img
+              src="https://cdn.pixabay.com/photo/2023/06/10/20/39/room-8054837_640.jpg"
+              alt="Project 3"
+              height="144"
+              width="144"
+            />
+            <h4>Project 4</h4>
+            <p>Deskripsi singkat tentang proyek ini.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section id="video">
+      <br />
+      <div class="all-episode">
+        <div class="episode-item">
+          <div class="episode-header">
+            <span class="episode-title">Video Preview: </span>
+            <img
+              alt="New"
+              src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhBAa_80jTM32PIXgryc-x9bwP6RZPuvBdVHs49CpF_SXep6oVwstyMopK2V-lUGt4JmzG-KvDr8jWS7mOfclGwyTCbRoxEw_jHAnJzv4VDQNpAEUGo-dbswL-Jd8UFfTukuWSviS1vyOHC/s1600-rw/new-gif.gif"
+            />
+          </div>
+          <button class="toggle-button" onclick="toggleEpisode('episode-1')">
+            Show
+          </button>
+          <div id="episode-1" class="episode-content" style="display: none">
+            <div class="video-container">
+              <iframe
+                src="https://www.youtube.com/embed/9_abt_XNmfE?si=OdwXIZqxKYJFXmt8"
+                scrolling="no"
+                frameborder="0"
+                width="640"
+                height="1000"
+                allowfullscreen="true"
+                webkitallowfullscreen="true"
+                mozallowfullscreen="true"
+                class="vids"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleEpisode(episodeId) {
+        const episodeContent = document.getElementById(episodeId);
+        const button = episodeContent.previousElementSibling;
+        if (episodeContent.style.display === "none") {
+          episodeContent.style.display = "block";
+          button.innerText = "Hide";
+        } else {
+          episodeContent.style.display = "none";
+          button.innerText = "Show";
+        }
+      }
+    </script>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content">
+        <h2>Night02</h2>
+        <p>
+          Ikuti saya di media sosial dan tetap terupdate dengan proyek dan
+          penawaran terbaru saya.
+        </p>
+        <ul class="socials">
+          <li>
+            <a
+              href="https://www.facebook.com/khairy.zhafran.315"
+              class="btn"
+              target="_blank"
+              ><i class="fa fa-facebook"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/NightRunners02"
+              class="btn"
+              target="_blank"
+              ><i class="fa fa-github"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.instagram.com/catfun0202/"
+              class="btn"
+              target="_blank"
+              ><i class="fa fa-instagram"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/khairy-zhafran-67998a330/"
+              class="btn"
+              target="_blank"
+              ><i class="fa fa-linkedin"></i
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/@khairyzhafran7018"
+              class="btn"
+              target="_blank"
+              ><i class="fa fa-youtube"></i
+            ></a>
+          </li>
+        </ul>
+
+        <div class="footer-boxes">
+          <div class="footer-box">
+            <h4>Layanan Saya</h4>
+            <p>
+              Saya menyediakan berbagai layanan desain web untuk memenuhi semua
+              kebutuhan Anda. Hubungi saya untuk solusi kustom.
+            </p>
+          </div>
+          <div class="footer-box">
+            <h4>Kontak Saya</h4>
+            <p>Email: Night02@gmail.com</p>
+            <p>Phone: +62 123 4567 8910</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; Designed by NightRunners02</p>
+      </div>
+    </footer>
+  </body>
+</html>
